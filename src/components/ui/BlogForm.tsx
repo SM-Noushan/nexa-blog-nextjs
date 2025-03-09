@@ -1,8 +1,11 @@
+import { createBlog } from "@/actions/createBlog";
+import Form from "next/form";
+
 const BlogForm = () => {
   return (
     <div className="flex items-center justify-center min-h-screen my-10">
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6">
-        <form>
+        <Form action={createBlog}>
           <h2 className="text-2xl font-semibold mb-6 text-teal-600 text-center">
             Create Blog
           </h2>
@@ -51,6 +54,7 @@ const BlogForm = () => {
                 type="date"
                 name="publish_date"
                 id="publish_date"
+                defaultValue={new Date().toISOString().split("T")[0]}
                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500"
               />
             </div>
@@ -109,7 +113,7 @@ const BlogForm = () => {
           >
             Create
           </button>
-        </form>
+        </Form>
       </div>
     </div>
   );
