@@ -1,4 +1,4 @@
-# NexaBlog-Starter-Pack
+# NexaBlog: A Simple Blog Website
 
 ## Installation:
 
